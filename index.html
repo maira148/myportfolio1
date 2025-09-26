@@ -1,178 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Maira — Project & Operations Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maira | Professional Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: #0d1117;
-      color: #e6eef8;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px;
+      padding: 0;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
     }
     header {
-      display: flex;
-      gap: 20px;
-      align-items: center;
+      background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+      text-align: center;
+      padding: 3rem 1rem;
     }
-    .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #7c3aed, #06b6d4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 24px;
-      color: white;
-    }
-    h1 {
+    header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 3rem;
+      color: #76c7f0;
     }
-    p.lead {
-      color: #9aa4b2;
-      margin: 6px 0 18px;
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 320px;
-      gap: 24px;
-      margin-top: 20px;
-    }
-    .card {
-      background: rgba(255,255,255,0.03);
-      padding: 20px;
-      border-radius: 12px;
-    }
-    .section-title {
+    header a {
+      color: #f0a500;
+      text-decoration: none;
+      margin: 0 0.5rem;
       font-weight: bold;
-      margin-bottom: 10px;
-      color: white;
     }
-    .meta {
-      font-size: 14px;
-      color: #9aa4b2;
-      margin-bottom: 8px;
+    section {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
     }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
+    h2 {
+      color: #f0a500;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #333;
+      display: inline-block;
+      padding-bottom: 0.3rem;
     }
-    .chip {
-      background: rgba(255,255,255,0.04);
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 13px;
-      color: #9aa4b2;
-    }
-    .images {
+    .projects {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    .images img {
+    .project-card {
+      background: #1e1e1e;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card img {
       width: 100%;
-      border-radius: 8px;
-      background: #081022;
-      height: 140px;
+      height: 180px;
       object-fit: cover;
     }
-    a.button {
-      background: #7c3aed;
-      color: white;
-      padding: 10px 14px;
+    .project-card div {
+      padding: 1rem;
+    }
+    .project-card h3 {
+      margin: 0 0 0.5rem;
+      color: #76c7f0;
+    }
+    .case-study {
+      background: #1e1e1e;
+      padding: 2rem;
       border-radius: 10px;
-      text-decoration: none;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 10px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .skill-card {
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
     }
     footer {
-      margin-top: 30px;
-      color: #9aa4b2;
-      font-size: 13px;
+      background: #1f1f1f;
       text-align: center;
+      padding: 2rem 1rem;
+      color: #aaa;
     }
-    @media (max-width: 880px) {
-      .grid { grid-template-columns: 1fr; }
-      .images { grid-template-columns: repeat(2, 1fr); }
+    footer a {
+      color: #76c7f0;
+      text-decoration: none;
+      margin: 0 0.5rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="avatar">MM</div>
-      <div>
-        <h1>Maira — Remote Project & Operations Coordinator</h1>
-        <p class="lead">Remote operations professional with 4 years of experience coordinating projects, tracking tasks, and managing stakeholders. Skilled in SQL, Google Workspace, Trello, and Notion.</p>
-        <a class="button" href="ABC.pdf" download>Download CV (PDF)</a>
-      </div>
-    </header>
+  <header>
+    <h1>Maira</h1>
+    <p>Project & Operations Manager | Data-Driven Decision Making | Remote Work Specialist</p>
+    <p>
+      <a href="mailto:mairazzzz120@gmail.com">Email</a> |
+      <a href="https://www.linkedin.com/in/mayra-m-198b58241/" target="_blank">LinkedIn</a> |
+     
+    </p>
+  </header>
 
-    <div class="grid">
-      <div class="card">
-        <div class="section-title">About & Contact</div>
-        <div class="meta"><strong>Name:</strong> Maira</div>
-        <div class="meta"><strong>Email:</strong> <a href="mailto:mairazzzz120@gmail.com" style="color:#e6eef8">mairazzzz120@gmail.com</a></div>
-        <div class="section-title" style="margin-top:14px">Education & Certifications</div>
-        <div class="meta"><strong>Master's in Information Technology</strong> — Virtual University, Pakistan</div>
-        <ul style="color:#9aa4b2">
-          <li>CS50 AI with Python – Harvard (edX)</li>
-          <li>Project Management – Google</li>
-          <li>MySQL, Web Development, Python – TheNewBoston & others</li>
-        </ul>
+  <section>
+    <h2>Professional Summary</h2>
+    <p>I am a results-driven <strong>Project and Operations Manager</strong> with over 4 years of remote experience managing distributed teams and delivering projects on time. I specialize in coordinating workflows, ensuring stakeholder alignment, and applying data-driven insights to improve decision-making. With strong knowledge of project management tools and foundational technical expertise in data and cloud, I bridge communication between business teams and technical specialists, ensuring smooth execution and measurable impact.</p>
+  </section>
 
-        <div class="section-title" style="margin-top:14px">Top Skills</div>
-        <div class="skills">
-          <div class="chip">Remote Operations</div>
-          <div class="chip">Project Coordination</div>
-          <div class="chip">Trello / Notion /Clickup /jira</div>
-          <div class="chip">Stakeholder Communication</div>
-          <div class="chip">Reporting & Documentation</div>
-          <div class="chip">SQL </div>
+  <section>
+    <h2>Key Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <img src="1,png" alt="Project 1">
+        <div>
+          <h3>Operations Workflow Optimization</h3>
+          <p>Coordinated multiple projects using Trello and Notion, streamlining reporting and reducing bottlenecks by 20%.</p>
         </div>
       </div>
-
-      <div class="card">
-        <div class="section-title">Experience</div>
-        <div class="meta"><strong>Operations Manager — M5</strong> (March 2021 – Jan 2025)</div>
-        <ul style="color:#9aa4b2">
-          <li>Coordinated and tracked multiple remote projects ensuring timely completion of deliverables.</li>
-          <li>Planned and scheduled tasks, assigned responsibilities, and monitored progress using Trello.</li>
-          <li>Communicated updates, risks, and milestones with senior management and stakeholders.</li>
-          <li>Documented project progress and prepared weekly reports.</li>
-        </ul>
+      <div class="project-card">
+        <img src="2.png" alt="Project 2">
+        <div>
+          <h3>Business Performance Dashboard</h3>
+          <p>Designed dashboards to provide leadership with real-time KPIs for faster and more informed decision-making.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="3.png" alt="Project 3">
+        <div>
+          <h3>Customer Retention Program</h3>
+          <p>Worked cross-functionally with marketing to use churn insights and implemented campaigns that improved retention by 12%.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="4.png" alt="Project 4">
+        <div>
+          <h3>Cloud Readiness Pilot</h3>
+          <p>Collaborated with technical teams to manage deployment of a demo cloud infrastructure with Terraform and Docker.</p>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="card" style="margin-top:20px">
-      <div class="section-title">Case Study — Global Marketing Campaign Coordination</div>
-      <p>Managed a simulated global marketing campaign remotely using Trello and Notion. Defined project scope, planned tasks, assigned work, tracked progress, and reported status effectively.</p>
-      <div class="images">
-        <img src="A.png" alt="Trello A">
-        <img src="B.png" alt="Trello B">
-        <img src="C.png" alt="Trello C">
-        <img src="D.png" alt="Notion D">
-        <img src="E.png" alt="Notion E">
-        <img src="F.png" alt="Notion F">
+  <section>
+    <h2>Case Study</h2>
+    <div class="case-study">
+      <h3>Customer Retention Analysis</h3>
+      <p><strong>Challenge:</strong> High customer churn was impacting revenue stability.</p>
+      <p><strong>Solution:</strong> Built a churn prediction model with Python and SQL, and developed dashboards to monitor retention KPIs in real time.</p>
+      <p><strong>Impact:</strong> Helped management identify at-risk customer segments and implement targeted campaigns, reducing churn by 12%.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills & Tools</h2>
+    <div class="skills">
+      <div class="skill-card">
+        <h3>Project Management</h3>
+        <p>Trello, Notion, ClickUp, Jira, Google Workspace</p>
+      </div>
+      <div class="skill-card">
+        <h3>Data Analysis</h3>
+        <p>Python, SQL, Power BI (dashboards, KPIs, forecasting)</p>
+      </div>
+      <div class="skill-card">
+        <h3>Cloud & Collaboration</h3>
+        <p>Docker, Terraform (basic knowledge), Slack, Microsoft Teams</p>
+      </div>
+      <div class="skill-card">
+        <h3>Core Strengths</h3>
+        <p>Remote Collaboration, Communication, Process Improvement, Risk Management, Reporting</p>
       </div>
     </div>
+  </section>
 
-    <footer>
-      Maira — Remote Project & Operations Coordinator • Email: <a href="mailto:mairazzzz120@gmail.com" style="color:#e6eef8">mairazzzz120@gmail.com</a>
-    </footer>
-  </div>
+  <footer>
+    <p>© 2025 Maira | <a href="https://maira148.github.io/myportfolio1/" target="_blank">Portfolio</a></p>
+  </footer>
 </body>
 </html>
