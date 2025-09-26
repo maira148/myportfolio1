@@ -4,104 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maira | Professional Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #121212;
-      color: #e0e0e0;
-      line-height: 1.6;
-    }
+    /* Reset & Base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #121212; color: #e0e0e0; line-height: 1.6; scroll-behavior: smooth; }
+
+    /* Header */
     header {
-      background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+      background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
       text-align: center;
-      padding: 3rem 1rem;
+      padding: 4rem 1rem;
+      position: relative;
+      overflow: hidden;
     }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      color: #76c7f0;
-    }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-    }
-    header a {
-      color: #f0a500;
-      text-decoration: none;
-      margin: 0 0.5rem;
-      font-weight: bold;
-    }
-    section {
-      padding: 3rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h2 {
-      color: #f0a500;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid #333;
-      display: inline-block;
-      padding-bottom: 0.3rem;
-    }
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
+    header h1 { font-size: 3rem; color: #76c7f0; margin-bottom: 0.5rem; }
+    header p { font-size: 1.2rem; color: #ccc; margin-bottom: 1rem; }
+    header a { color: #f0a500; text-decoration: none; margin: 0 0.5rem; font-weight: 600; transition: 0.3s; }
+    header a:hover { color: #76c7f0; }
+
+    /* Sections */
+    section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+    h2 { color: #f0a500; margin-bottom: 1rem; border-bottom: 3px solid #333; display: inline-block; padding-bottom: 0.5rem; font-size: 2rem; }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
     .project-card {
       background: #1e1e1e;
-      border-radius: 10px;
+      border-radius: 15px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-      transition: transform 0.3s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transition: transform 0.4s, box-shadow 0.4s;
+      cursor: pointer;
     }
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-    .project-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-    .project-card div {
-      padding: 1rem;
-    }
-    .project-card h3 {
-      margin: 0 0 0.5rem;
-      color: #76c7f0;
-    }
+    .project-card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.6); }
+    .project-card img { width: 100%; height: 200px; object-fit: cover; }
+    .project-card div { padding: 1.5rem; }
+    .project-card h3 { color: #76c7f0; margin-bottom: 0.5rem; font-size: 1.3rem; }
+    .project-card p { color: #ccc; font-size: 1rem; }
+
+    /* Case Study */
     .case-study {
       background: #1e1e1e;
       padding: 2rem;
-      border-radius: 10px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
       margin-top: 2rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
     }
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
+    .case-study:hover { transform: translateY(-5px); }
+    .case-study h3 { color: #76c7f0; margin-bottom: 1rem; font-size: 1.5rem; }
+    .case-study p { margin-bottom: 0.8rem; color: #ccc; }
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
     .skill-card {
       background: #1e1e1e;
       padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    }
-    footer {
-      background: #1f1f1f;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
       text-align: center;
-      padding: 2rem 1rem;
-      color: #aaa;
+      transition: transform 0.3s;
     }
-    footer a {
-      color: #76c7f0;
-      text-decoration: none;
-      margin: 0 0.5rem;
+    .skill-card:hover { transform: translateY(-5px); }
+    .skill-card h3 { color: #f0a500; margin-bottom: 0.8rem; font-size: 1.2rem; }
+    .skill-card p { color: #ccc; font-size: 0.95rem; }
+
+    /* Footer */
+    footer { background: #1f1f1f; text-align: center; padding: 2rem 1rem; color: #aaa; }
+    footer a { color: #76c7f0; text-decoration: none; margin: 0 0.5rem; transition: 0.3s; }
+    footer a:hover { color: #f0a500; }
+
+    /* Animations */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    @media(max-width:768px){
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1rem; }
+      .project-card img { height: 180px; }
     }
   </style>
 </head>
@@ -111,42 +92,41 @@
     <p>Project & Operations Manager | Data-Driven Decision Making | Remote Work Specialist</p>
     <p>
       <a href="mailto:mairazzzz120@gmail.com">Email</a> |
-      <a href="https://www.linkedin.com/in/mayra-m-198b58241/" target="_blank">LinkedIn</a> |
-     
+      <a href="https://www.linkedin.com/in/mayra-m-198b58241/" target="_blank">LinkedIn</a>
     </p>
   </header>
 
-  <section>
+  <section class="fade-in">
     <h2>Professional Summary</h2>
     <p>I am a results-driven <strong>Project and Operations Manager</strong> with over 4 years of remote experience managing distributed teams and delivering projects on time. I specialize in coordinating workflows, ensuring stakeholder alignment, and applying data-driven insights to improve decision-making. With strong knowledge of project management tools and foundational technical expertise in data and cloud, I bridge communication between business teams and technical specialists, ensuring smooth execution and measurable impact.</p>
   </section>
 
-  <section>
+  <section class="fade-in">
     <h2>Key Projects</h2>
     <div class="projects">
       <div class="project-card">
-        <img src="1.png" alt="Project 1">
+        <img src="1.png" alt="Operations Workflow Optimization">
         <div>
           <h3>Operations Workflow Optimization</h3>
           <p>Coordinated multiple projects using Trello and Notion, streamlining reporting and reducing bottlenecks by 20%.</p>
         </div>
       </div>
       <div class="project-card">
-        <img src="2.png" alt="Project 2">
+        <img src="2.png" alt="Business Performance Dashboard">
         <div>
           <h3>Business Performance Dashboard</h3>
           <p>Designed dashboards to provide leadership with real-time KPIs for faster and more informed decision-making.</p>
         </div>
       </div>
       <div class="project-card">
-        <img src="3.png" alt="Project 3">
+        <img src="3.png" alt="Customer Retention Program">
         <div>
           <h3>Customer Retention Program</h3>
           <p>Worked cross-functionally with marketing to use churn insights and implemented campaigns that improved retention by 12%.</p>
         </div>
       </div>
       <div class="project-card">
-        <img src="4.png" alt="Project 4">
+        <img src="4.png" alt="Cloud Readiness Pilot">
         <div>
           <h3>Cloud Readiness Pilot</h3>
           <p>Collaborated with technical teams to manage deployment of a demo cloud infrastructure with Terraform and Docker.</p>
@@ -155,7 +135,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="fade-in">
     <h2>Case Study</h2>
     <div class="case-study">
       <h3>Customer Retention Analysis</h3>
@@ -165,7 +145,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="fade-in">
     <h2>Skills & Tools</h2>
     <div class="skills">
       <div class="skill-card">
@@ -187,8 +167,23 @@
     </div>
   </section>
 
-  <footer>
+  <footer class="fade-in">
     <p>© 2025 Maira | <a href="https://maira148.github.io/myportfolio1/" target="_blank">Portfolio</a></p>
   </footer>
+
+  <script>
+    // Fade-in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
 </body>
 </html>
