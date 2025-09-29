@@ -1,202 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maira | Product Owner Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset & Base */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #121212; color: #e0e0e0; line-height: 1.6; scroll-behavior: smooth; }
-
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    header h1 { font-size: 3rem; color: #76c7f0; margin-bottom: 0.5rem; }
-    header p { font-size: 1.2rem; color: #ccc; margin-bottom: 1rem; }
-    header a { color: #f0a500; text-decoration: none; margin: 0 0.5rem; font-weight: 600; transition: 0.3s; }
-    header a:hover { color: #76c7f0; }
-
-    /* Sections */
-    section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
-    h2 { color: #f0a500; margin-bottom: 1rem; border-bottom: 3px solid #333; display: inline-block; padding-bottom: 0.5rem; font-size: 2rem; }
-
-    /* Projects */
-    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-    .project-card {
-      background: #1e1e1e;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-      transition: transform 0.4s, box-shadow 0.4s;
-      cursor: pointer;
-    }
-    .project-card:hover { transform: translateY(-10px); box-shadow: 0 12px 30px rgba(0,0,0,0.6); }
-    .project-card img { width: 100%; height: 200px; object-fit: cover; }
-    .project-card div { padding: 1.5rem; }
-    .project-card h3 { color: #76c7f0; margin-bottom: 0.5rem; font-size: 1.3rem; }
-    .project-card p { color: #ccc; font-size: 1rem; }
-
-    /* Case Study */
-    .case-study {
-      background: #1e1e1e;
-      padding: 2rem;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-      margin-top: 2rem;
-      transition: transform 0.3s;
-    }
-    .case-study:hover { transform: translateY(-5px); }
-    .case-study h3 { color: #76c7f0; margin-bottom: 1rem; font-size: 1.5rem; }
-    .case-study p { margin-bottom: 0.8rem; color: #ccc; }
-
-    /* Skills */
-    .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
-    .skill-card {
-      background: #1e1e1e;
-      padding: 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-      text-align: center;
-      transition: transform 0.3s;
-    }
-    .skill-card:hover { transform: translateY(-5px); }
-    .skill-card h3 { color: #f0a500; margin-bottom: 0.8rem; font-size: 1.2rem; }
-    .skill-card p { color: #ccc; font-size: 0.95rem; }
-
-    /* Footer */
-    footer { background: #1f1f1f; text-align: center; padding: 2rem 1rem; color: #aaa; }
-    footer a { color: #76c7f0; text-decoration: none; margin: 0 0.5rem; transition: 0.3s; }
-    footer a:hover { color: #f0a500; }
-
-    /* Animations */
-    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-    @media(max-width:768px){
-      header h1 { font-size: 2.2rem; }
-      header p { font-size: 1rem; }
-      .project-card img { height: 180px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maira | Product Owner Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset & Base */
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        /* Header */
+        
+        header {
+            background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        
+        header h1 {
+            font-size: 3rem;
+            color: #76c7f0;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+        
+        header a {
+            color: #f0a500;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        
+        header a:hover {
+            color: #76c7f0;
+        }
+        /* Sections */
+        
+        section {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: auto;
+        }
+        
+        h2 {
+            color: #f0a500;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #333;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        /* Projects */
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .project-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.4s, box-shadow 0.4s;
+            cursor: pointer;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+        }
+        
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-card div {
+            padding: 1.5rem;
+        }
+        
+        .project-card h3 {
+            color: #76c7f0;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .project-card p {
+            color: #ccc;
+            font-size: 1rem;
+        }
+        /* Case Study */
+        
+        .case-study {
+            background: #1e1e1e;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            margin-top: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .case-study:hover {
+            transform: translateY(-5px);
+        }
+        
+        .case-study h3 {
+            color: #76c7f0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .case-study p {
+            margin-bottom: 0.8rem;
+            color: #ccc;
+        }
+        /* Skills */
+        
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .skill-card {
+            background: #1e1e1e;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .skill-card h3 {
+            color: #f0a500;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .skill-card p {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+        /* Footer */
+        
+        footer {
+            background: #1f1f1f;
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #aaa;
+        }
+        
+        footer a {
+            color: #76c7f0;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: 0.3s;
+        }
+        
+        footer a:hover {
+            color: #f0a500;
+        }
+        /* Animations */
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media(max-width:768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .project-card img {
+                height: 180px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <h1>Maira</h1>
-    <p>Product Owner | Agile & Scrum Practitioner | Project & Operations Manager</p>
-    <p>
-      <a href="mailto:mairazzzz120@gmail.com">Email</a> |
-      <a href="https://www.linkedin.com/in/mayra-m-198b58241/" target="_blank">LinkedIn</a>
-    </p>
-  </header>
+    <header>
+        <h1>Maira</h1>
+        <p>Product Owner | Agile & Scrum Practitioner | Project & Operations Manager</p>
+        <p>
+            <a href="mailto:mairazzzz120@gmail.com">Email</a> |
+            <a href="https://www.linkedin.com/in/mayra-m-198b58241/" target="_blank">LinkedIn</a>
+        </p>
+    </header>
 
-  <section class="fade-in">
-    <h2>Professional Summary</h2>
-    <p>I am a dedicated <strong>Product Owner & Agile Project Manager</strong> with 4+ years of remote experience. Skilled in <strong>Scrum, Kanban, backlog management, and stakeholder communication</strong>, I specialize in turning business needs into actionable roadmaps. Proficient with tools such as <strong>Asana, Jira, Trello, Notion, and ClickUp</strong>, I bridge strategy and execution while ensuring teams deliver maximum value. With a mix of product mindset, project execution, and technical awareness, I thrive in cross-functional environments where agility and impact matter most.</p>
-  </section>
+    <section class="fade-in">
+        <h2>Professional Summary</h2>
+        <p>I am a dedicated <strong>Product Owner & Agile Project Manager</strong> with 4+ years of remote experience. Skilled in <strong>Scrum, Kanban, backlog management, and stakeholder communication</strong>, I specialize in turning business needs into
+            actionable roadmaps. Proficient with tools such as <strong>Asana, Jira, Trello, Notion, and ClickUp</strong>, I bridge strategy and execution while ensuring teams deliver maximum value. With a mix of product mindset, project execution, and
+            technical awareness, I thrive in cross-functional environments where agility and impact matter most.</p>
+    </section>
 
-  <section class="fade-in">
-    <h2>Key Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <img src="1.png" alt="Agile Project Delivery">
-        <div>
-          <h3>Agile Project Delivery</h3>
-          <p>Led Scrum ceremonies (sprint planning, reviews, retrospectives) and managed product backlog in Jira, resulting in 95% on-time sprint completion rate.</p>
+    <section class="fade-in">
+        <h2>Key Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="1.png" alt="Agile Project Delivery">
+                <div>
+                    <h3>Agile Project Delivery</h3>
+                    <p>Led Scrum ceremonies (sprint planning, reviews, retrospectives) and managed product backlog in Jira, resulting in 95% on-time sprint completion rate.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="2.png" alt="Cross-Functional Collaboration">
+                <div>
+                    <h3>Cross-Functional Collaboration</h3>
+                    <p>Coordinated with marketing, sales, and engineering via Asana and Notion, improving alignment and reducing feature delivery delays by 18%.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="3.png" alt="Process Improvement Initiative">
+                <div>
+                    <h3>Process Improvement Initiative</h3>
+                    <p>Introduced Kanban boards in Trello to visualize workflows, cutting cycle times and boosting team productivity by 20%.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="4.png" alt="Data-Driven Product Insights">
+                <div>
+                    <h3>Data-Driven Product Insights</h3>
+                    <p>Designed dashboards with SQL and Power BI, helping leadership prioritize features based on customer usage metrics and KPIs.</p>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="project-card">
-        <img src="2.png" alt="Cross-Functional Collaboration">
-        <div>
-          <h3>Cross-Functional Collaboration</h3>
-          <p>Coordinated with marketing, sales, and engineering via Asana and Notion, improving alignment and reducing feature delivery delays by 18%.</p>
+    </section>
+
+    <section class="fade-in">
+        <h2>Case Studies</h2>
+
+        <div class="case-study">
+            <h3>Weather App Development</h3>
+            <p><strong>Challenge:</strong> Users needed accurate, real-time weather data with personalized alerts, but the team struggled with scope creep and unclear priorities.</p>
+            <p><strong>Solution:</strong> As Product Owner, I defined clear user stories, prioritized backlog based on business value, and organized sprints in Jira. Coordinated cross-functional team communication using Asana and daily stand-ups via Zoom.</p>
+            <p><strong>Impact:</strong> Delivered a fully functional weather app on time. Feature adoption increased by 30%, and user satisfaction improved due to timely alerts and smooth UX.</p>
         </div>
-      </div>
-      <div class="project-card">
-        <img src="3.png" alt="Process Improvement Initiative">
-        <div>
-          <h3>Process Improvement Initiative</h3>
-          <p>Introduced Kanban boards in Trello to visualize workflows, cutting cycle times and boosting team productivity by 20%.</p>
+
+        <div class="case-study">
+            <h3>Heart Health Medical App</h3>
+            <p><strong>Challenge:</strong> The healthcare app required complex data integration from wearable devices and compliance with HIPAA-like regulations, which delayed initial development.</p>
+            <p><strong>Solution:</strong> Implemented a Scrum framework with 2-week sprints, maintained a value-based backlog, and conducted stakeholder reviews weekly. Coordinated QA testing and data privacy checks to meet compliance standards.</p>
+            <p><strong>Impact:</strong> Successfully launched the app with all core features on schedule. Clinicians reported a 25% reduction in patient monitoring errors, and patients gave positive feedback on usability and reliability.</p>
         </div>
-      </div>
-      <div class="project-card">
-        <img src="4.png" alt="Data-Driven Product Insights">
-        <div>
-          <h3>Data-Driven Product Insights</h3>
-          <p>Designed dashboards with SQL and Power BI, helping leadership prioritize features based on customer usage metrics and KPIs.</p>
+
+        <div class="case-study">
+            <h3>Digital Marketing Campaign Management</h3>
+            <p><strong>Challenge:</strong> A client wanted to launch a multi-channel digital campaign, but lacked coordination between content, social media, and analytics teams.</p>
+            <p><strong>Solution:</strong> As Project Manager, I created a detailed project plan with milestones in Trello, assigned responsibilities, and tracked progress weekly. Implemented KPI dashboards using Google Analytics to monitor campaign performance
+                and coordinated cross-team reviews.</p>
+            <p><strong>Impact:</strong> Campaign reached target audience 20% faster than planned, engagement rates increased by 35%, and lead generation improved significantly, all while maintaining budget and timeline.</p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="fade-in">
-    <h2>Case Studies</h2>
-    <div class="case-study">
-      <h3>Backlog Prioritization for SaaS Product</h3>
-      <p><strong>Challenge:</strong> Development team faced delays due to unclear priorities.</p>
-      <p><strong>Solution:</strong> Collaborated with stakeholders to create a value-based backlog in Jira, writing user stories and acceptance criteria.</p>
-      <p><strong>Impact:</strong> Increased clarity for developers and cut release delays by 25%.</p>
-    </div>
+    </section>
 
-    <div class="case-study">
-      <h3>Remote Scrum Implementation</h3>
-      <p><strong>Challenge:</strong> Distributed team struggled with coordination.</p>
-      <p><strong>Solution:</strong> Introduced Scrum ceremonies via Zoom and Asana; used Notion for documentation.</p>
-      <p><strong>Impact:</strong> Improved collaboration, boosting team satisfaction and sprint velocity.</p>
-    </div>
-  </section>
+    <section class="fade-in">
+        <h2>Skills & Tools</h2>
+        <div class="skills">
+            <div class="skill-card">
+                <h3>Agile & Product</h3>
+                <p>Scrum, Kanban, Backlog Grooming, User Stories, Sprint Planning</p>
+            </div>
+            <div class="skill-card">
+                <h3>Project Management Tools</h3>
+                <p>Jira, Asana, Trello, Notion, ClickUp, Confluence</p>
+            </div>
+            <div class="skill-card">
+                <h3>Data & Cloud Awareness</h3>
+                <p>SQL, Power BI,Python,ML algorithms, Tableau, Spark (basic), Docker, Terraform (basic)</p>
+            </div>
+            <div class="skill-card">
+                <h3>Core Strengths</h3>
+                <p>Stakeholder Communication, Remote Collaboration, Prioritization, Process Improvement</p>
+            </div>
+            <div class="skill-card">
+                <h3>Administrative & VA Skills</h3>
+                <p>Calendar & Email Management, File & Document Organization, Data Entry, Client Communication, Meeting Coordination, Report Preparation, Internet Research</p>
+            </div>
+            <div class="skill-card">
+                <h3>Technical Tools for VA Roles</h3>
+                <p>Google Workspace (Docs, Sheets, Drive, Gmail, Calendar), Microsoft Office (Word, Excel, PowerPoint, Outlook), Zoom, Microsoft Teams, CRM tools (HubSpot, Zoho)</p>
+            </div>
+        </div>
+    </section>
 
-  <section class="fade-in">
-    <h2>Skills & Tools</h2>
-    <div class="skills">
-      <div class="skill-card">
-        <h3>Agile & Product</h3>
-        <p>Scrum, Kanban, Backlog Grooming, User Stories, Sprint Planning</p>
-      </div>
-      <div class="skill-card">
-        <h3>Project Management Tools</h3>
-        <p>Jira, Asana, Trello, Notion, ClickUp, Confluence</p>
-      </div>
-      <div class="skill-card">
-        <h3>Data & Cloud Awareness</h3>
-        <p>SQL, Power BI,Python,ML algotithms ,Tableau ,Spark(basic knowledge) Docker, Terraform (basic knowledge)</p>
-      </div>
-      <div class="skill-card">
-        <h3>Core Strengths</h3>
-        <p>Stakeholder Communication, Remote Collaboration, Prioritization, Process Improvement</p>
-      </div>
-       <div class="skill-card">
-      <h3>Administrative & VA Skills</h3>
-      <p>Calendar & Email Management, File & Document Organization, Data Entry, Client Communication, Meeting Coordination, Report Preparation, Internet Research</p>
-    </div>
-    <div class="skill-card">
-      <h3>Technical Tools for VA Roles</h3>
-      <p>Google Workspace (Docs, Sheets, Drive, Gmail, Calendar), Microsoft Office (Word, Excel, PowerPoint, Outlook), Zoom, Microsoft Teams, CRM tools (HubSpot, Zoho)</p>
-    </div>
-    </div>
-  </section>
+    <footer class="fade-in">
+        <p>© 2025 Maira | <a href="https://maira148.github.io/myportfolio1/" target="_blank">Portfolio</a></p>
+    </footer>
 
-  <footer class="fade-in">
-    <p>© 2025 Maira | <a href="https://maira148.github.io/myportfolio1/" target="_blank">Portfolio</a></p>
-  </footer>
+    <script>
+        // Fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = {
+            threshold: 0.2,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('visible');
+                appearOnScroll.unobserve(entry.target);
+            });
+        }, appearOptions);
 
-  <script>
-    // Fade-in on scroll
-    const faders = document.querySelectorAll('.fade-in');
-    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        appearOnScroll.unobserve(entry.target);
-      });
-    }, appearOptions);
-
-    faders.forEach(fader => appearOnScroll.observe(fader));
-  </script>
+        faders.forEach(fader => appearOnScroll.observe(fader));
+    </script>
 </body>
+
 </html>
